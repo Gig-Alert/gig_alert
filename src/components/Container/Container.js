@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-// import Jumbotron from "../Jumbotron";
-import Navbar from "../navbar";
+import Navbar from "../Navbar";
 
 class Container extends Component {
   state = {
