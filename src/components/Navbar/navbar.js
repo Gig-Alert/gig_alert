@@ -1,18 +1,37 @@
 import React from "react";
 import "./navbar.css";
 
-const Navbar = props => (
-  <ul className="nav nav-tabs">
-    <li className="nav-item">
-      <button>
-        onClick={() => props.handlePageChange("Home")}
-        className=
-        {props.currentPage === "Home" ? "nav-link active" : "nav-link"}
-      </button>
-      {props.label}
-    </li>
-    <a>Band Stuff</a>
-  </ul>
-);
-
+const Navbar = props => {
+  return (
+    <ul className="nav nav-tabs">
+      <li className="nav-item">
+        <a
+          href="/"
+          onClick={() => props.handlePageChange("Home")}
+          className="nav-link"
+        >
+          Home
+        </a>
+      </li>
+      <li className="nav-item">
+        <a
+          href="/bands"
+          onClick={() => props.handlePageChange("Bands")}
+          className="nav-link"
+        >
+          Bands
+        </a>
+      </li>
+      <li className="nav-item">
+        <a
+          href="/musicians"
+          onClick={() => props.handlePageChange("musicians")}
+          className="nav-link"
+        >
+          Musicians
+        </a>
+      </li>
+    </ul>
+  );
+};
 export default Navbar;

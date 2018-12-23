@@ -5,14 +5,16 @@ import Home from "./pages/homes";
 import Bands from "./pages/bands";
 import Musicians from "./pages/musicians";
 import Title from "./components/Title";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
     <Container>
       <Router>
         <div>
+          <Navbar />
           <Route exact path="/" component={Home} />
-          <Route exact path="/bands" component={Bands} />
+          <Route path="Bands" component={Bands} />
           <Route exact path="/musicians" component={Musicians} />
         </div>
       </Router>
