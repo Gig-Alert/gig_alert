@@ -7,19 +7,19 @@ class Container extends Component {
     currentPage: "Home"
   };
 
-  handlePageChange = page => {
-    this.setState({ currentPage: page });
-  };
+  // handlePageChange = page => {
+  //   this.setState({ currentPage: page });
+  // };
 
   render() {
     return (
       <div>
         <div>
           <Navbar
-            className="navbar navbar-expand-lg navbar-dark bg-primary"
+          /* className="navbar navbar-expand-lg navbar-dark bg-primary"
             currentPage={this.state.currentPage}
             handlePageChange={this.handlePageChange}
-            label="Gig Alert"
+            label="Gig Alert" */
           />
 
           <Jumbotron />

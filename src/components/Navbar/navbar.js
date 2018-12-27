@@ -1,37 +1,25 @@
 import React from "react";
 import "./navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = props => {
   return (
-    <ul className="nav nav-tabs">
-      <li className="nav-item">
-        <a
-          href="/"
-          onClick={() => props.handlePageChange("Home")}
-          className="nav-link"
-        >
-          Home
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="/bands"
-          onClick={() => props.handlePageChange("Bands")}
-          className="nav-link"
-        >
-          Bands
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="/musicians"
-          onClick={() => props.handlePageChange("musicians")}
-          className="nav-link"
-        >
-          Musicians
-        </a>
-      </li>
-    </ul>
+    <nav className="nav-wrapper red darken-3">
+      <div className="container">
+        {/* <h1 className="brand-logo" /> */}
+        <ul className="nav nav-tabs">
+          <li className="nav-item">
+            <Link to="/homes">Home</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/bands">Bands</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/musicians">Musicians</Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 };
 export default Navbar;
