@@ -3,8 +3,8 @@ import React from "react";
 const Bands = () => {
   return (
     <div>
-      <h1>Home Page</h1>
-      <p>Bands Page</p>
+      <h1>Bands Page</h1>
+      <p />
     </div>
   );
 };

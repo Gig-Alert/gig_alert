@@ -17,6 +17,9 @@ const Navbar = props => {
           <li className="nav-item">
             <Link to="/musicians">Musicians</Link>
           </li>
+          <li className="nav-item">
+            <Link to="/login">Login</Link>
+          </li>
         </ul>
       </div>
     </nav>

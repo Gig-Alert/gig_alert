@@ -3,8 +3,8 @@ import React from "react";
 const Musicians = () => {
   return (
     <div>
-      <h1>Home Page</h1>
-      <p>Musicians Page</p>
+      <h1>Musicians Page</h1>
+      <p> Stuff</p>
     </div>
   );
 };
