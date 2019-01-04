@@ -1,12 +1,15 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
+import { FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./login.css";
+import LogNav from "../components/Lognav";
+import LoaderButton from "../components/LoaderButton";
 
 class Login extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      isLoading: false,
       email: "",
       password: ""
     };
@@ -22,24 +25,36 @@ class Login extends Component {
     });
   };
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault();
+
+    // this.setState({ isLoading: true });
+
+    // try {
+    //   await Auth.signIn(this.state.email, this.state.password);
+    //   this.props.userHasAuthenticated(true);
+    //   this.props.history.push("/");
+    // } catch (e) {
+    //   alert(e.message);
+    //   this.setState({ isLoading: false });
+    // }
   };
 
   render() {
     return (
       <div className="Login">
+        <LogNav />
         <form onSubmit={this.handleSubmit}>
-          <FormGroup controlId="email" bsSize="large">
-            <FormLabel>Email</FormLabel>
+          <FormGroup controlId="username" bssize="large">
+            <FormLabel>Username</FormLabel>
             <FormControl
               autoFocus
-              type="email"
+              type="name"
               value={this.state.email}
               onChange={this.handleChange}
             />
           </FormGroup>
-          <FormGroup controlId="password" bsSize="large">
+          <FormGroup controlId="password" bssize="large">
             <FormLabel>Password</FormLabel>
             <FormControl
               value={this.state.password}
@@ -47,14 +62,15 @@ class Login extends Component {
               type="password"
             />
           </FormGroup>
-          <Button
+          <LoaderButton
             block
-            bsSize="large"
+            bssize="large"
             disabled={!this.validateForm()}
             type="submit"
-          >
-            Login
-          </Button>
+            isLoading={this.state.isLoading}
+            text="Login"
+            loadingText="Logging in…"
+          />
         </form>
       </div>
     );

@@ -1,10 +1,10 @@
 import React from "react";
-import "./navbar.css";
 import { Link } from "react-router-dom";
+import "./navbar.css";
 
 const Navbar = props => {
   return (
-    <nav className="nav-wrapper red darken-3">
+    <nav className="nav-wrapper red darken 3">
       <div className="container">
         {/* <h1 className="brand-logo" /> */}
         <ul className="nav nav-tabs">
