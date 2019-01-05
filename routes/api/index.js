@@ -5,7 +5,7 @@ router.get("/", (req, res) => {
   res.send("API ROUTE!");
 });
 
-router.get("/findBand", () => {
+router.get("/findBand", (req, res) => {
   res.send("connected to api route");
 });
 
