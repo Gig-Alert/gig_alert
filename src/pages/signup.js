@@ -18,6 +18,17 @@ class Signup extends Component {
     };
   }
 
+  /*
+  onButtonClick(){
+    axios.get('/findBand').then((data)=>{
+      console.log(data)
+      
+    })
+  }
+
+
+  */
+
   validateForm() {
     return (
       this.state.email.length > 0 &&

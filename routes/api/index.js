@@ -1,7 +1,12 @@
 const router = require("express").Router();
 const home = require("./home.js");
 
-// Book routes
-router.use("/home", home);
+router.get("/", (req, res) => {
+  res.send("API ROUTE!");
+});
+
+router.get("/findBand", () => {
+  res.send("connected to api route");
+});
 
 module.exports = router;
