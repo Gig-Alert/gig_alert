@@ -7,21 +7,14 @@ class Bands extends Component {
   state = {
     bands: "",
     email: "",
-    date: [],
-    type: [],
-    county: []
+    date: "",
+    type: "",
+    county: ""
   };
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
     });
-    // this.setState({
-    //   bands: e.target.value,
-    //   email: e.target.value,
-    //   date: e.target.value,
-    //   type: e.target.value,
-    //   county: e.target.value
-    // });
   };
   handleSubmit = e => {
     e.preventDefault();
@@ -62,7 +55,7 @@ class Bands extends Component {
               <Form.Label>Date Needed</Form.Label>
               <Form.Control
                 type="date"
-                mame="date"
+                name="date"
                 defaultValue={this.state.date}
                 placeholder="Date Needed"
                 onChange={this.handleChange}
@@ -72,7 +65,13 @@ class Bands extends Component {
           <Form.Row>
             <Form.Group as={Col} controlId="formMusician">
               <Form.Label>Musician Needed</Form.Label>
-              <Form.Control as="select">
+              <Form.Control
+                as="select"
+                name="type"
+                defaultValue={this.state.type}
+                placeholder="type"
+                onChange={this.handleChange}
+              >
                 <option>Choose...</option>
                 <option>Guitar</option>
                 <option>Drummer</option>
@@ -84,21 +83,18 @@ class Bands extends Component {
           <Form.Row>
             <Form.Group as={Col} controlId="formGridState">
               <Form.Label>County</Form.Label>
-              <Form.Control as="select">
+              <Form.Control
+                as="select"
+                name="county"
+                defaultValue={this.state.county}
+                placeholder="County"
+                onChange={this.handleChange}
+              >
                 <option>Choose...</option>
                 <option>Cuyahoga</option>
                 <option>Summit</option>
               </Form.Control>
             </Form.Group>
-
-            {/* <Form.Group as={Col} controlId="formGridState">
-            <Form.Label>State</Form.Label>
-            <Form.Control as="select">
-              <option>Choose...</option>
-              <option>Ohio</option>
-              <option>Michigan</option>
-            </Form.Control>
-          </Form.Group> */}
           </Form.Row>
 
           <Button onClick={this.handleSubmit} variant="primary" type="button">
