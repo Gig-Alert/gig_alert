@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import LogNav from "../components/Lognav";
+import LogNav from "../../components/Lognav";
 import { FormText, FormGroup, FormControl, FormLabel } from "react-bootstrap";
-import LoaderButton from "../components/LoaderButton";
+import LoaderButton from "../../components/LoaderButton";
 import "./signup.css";
 
 class Signup extends Component {

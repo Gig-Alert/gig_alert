@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import Navbar from "../components/Navbar";
-import { Form, Col, Button } from "react-bootstrap";
-import "./bands.css";
-import background from "../Assets/img/bands.jpg";
-import axios from "axios";
+import React, { Component } from "react"
+import Navbar from "../../components/Navbar"
+import { Form, Col, Button } from "react-bootstrap"
+import "./bands.css"
+import background from "../../Assets/img/bands.jpg"
+import axios from "axios"
 
 const backgroundHead = {
   backgroundImage: "url(" + background + ")"
-};
+}
 
 class Bands extends Component {
   state = {
@@ -16,36 +16,29 @@ class Bands extends Component {
     date: "",
     type: "",
     county: ""
-  };
+  }
 
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
-    });
-  };
+    })
+  }
   handleSubmit = e => {
-    e.preventDefault();
+    e.preventDefault()
 
-    // const { bands, email, date, type, county } = this.state;
-    // if (!bands || !email || !date || !type || !county) return;
+    const { bands, email, date, type, county } = this.state
+    if (!bands || !email || !date || !type || !county) return
 
-    const postText = {
-      name: "Larry",
-      email: "t@t.com",
-      date: "",
-      type: "Vocals",
-      county: "Summit"
-    };
     axios
-      .post("/api/bands", postText)
+      .post("/api/bands", this.state)
       .then(function(response) {
-        console.log(response);
+        console.log(response)
       })
       .catch(error => {
-        console.log(error.response);
-      });
+        console.log(error.response)
+      })
 
-    // console.log("Before Fetch");
+    // console.log("Before Fetch")
     // // ----------------------------------------------------------------------------
     // // Does there need to be another package.json in src to get proxy to work
     // // Proxy bridges the gap to alow react to connect to backend routes like '/api/bands'
@@ -68,16 +61,16 @@ class Bands extends Component {
     //     if (!res.success)
     //       this.setState({
     //         error: res.error.message || res.error
-    //       });
+    //       })
     //     else
     //       this.setState({
     //         author: "",
     //         text: "",
     //         error: null
-    //       });
-    //   });
-    // console.log("Stuff", this.state);
-  };
+    //       })
+    //   })
+    // console.log("Stuff", this.state)
+  }
 
   render() {
     return (
@@ -161,7 +154,7 @@ class Bands extends Component {
           </Button>
         </Form>
       </div>
-    );
+    )
   }
 }
-export default Bands;
+export default Bands

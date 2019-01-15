@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/Navbar";
 import { Card, Button, Form, Col } from "react-bootstrap";
 import "./musicians.css";
 
