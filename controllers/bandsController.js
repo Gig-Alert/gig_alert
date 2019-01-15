@@ -1,9 +1,8 @@
 const db = require("../models/bands");
 
-// Defining methods for the booksController
+// Defining methods for the bandsController
 module.exports = {
   findAll: function(req, res) {
-    console.log("Made it to controller!");
     db.Bands.find(req.query)
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))

@@ -26,57 +26,17 @@ class Bands extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    // const { bands, email, date, type, county } = this.state;
-    // if (!bands || !email || !date || !type || !county) return;
+    const { bands, email, date, type, county } = this.state;
+    if (!bands || !email || !date || !type || !county) return;
 
-    const postText = {
-      name: "Larry",
-      email: "t@t.com",
-      date: "",
-      type: "Vocals",
-      county: "Summit"
-    };
     axios
-      .post("/api/bands", postText)
+      .post("/api/bands", this.state)
       .then(function(response) {
         console.log(response);
       })
       .catch(error => {
         console.log(error.response);
       });
-
-    // console.log("Before Fetch");
-    // // ----------------------------------------------------------------------------
-    // // Does there need to be another package.json in src to get proxy to work
-    // // Proxy bridges the gap to alow react to connect to backend routes like '/api/bands'
-    // // ----------------------------------------------------------------------------
-    // fetch("/api/bands", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json"
-    //   },
-    //   body: JSON.stringify({
-    //     bands,
-    //     email,
-    //     date,
-    //     type,
-    //     county
-    //   })
-    // })
-    //   .then(res => res.json())
-    //   .then(res => {
-    //     if (!res.success)
-    //       this.setState({
-    //         error: res.error.message || res.error
-    //       });
-    //     else
-    //       this.setState({
-    //         author: "",
-    //         text: "",
-    //         error: null
-    //       });
-    //   });
-    // console.log("Stuff", this.state);
   };
 
   render() {

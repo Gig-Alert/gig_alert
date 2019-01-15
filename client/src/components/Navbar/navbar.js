@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Navbar, Nav } from "react-bootstrap";
 import "./navbar.css";
 
-const Navbar = props => {
+const GigNav = props => {
   return (
-    <nav className="nav-wrapper red darken 3">
-      <div className="container">
+    <Navbar className="nav1" bg="dark" variant="dark">
+      <Nav className="mr-auto">
         {/* <h1 className="brand-logo" /> */}
         <ul className="nav nav-tabs">
           <li className="nav-item">
@@ -21,8 +22,8 @@ const Navbar = props => {
             <Link to="/login">Login</Link>
           </li>
         </ul>
-      </div>
-    </nav>
+      </Nav>
+    </Navbar>
   );
 };
-export default Navbar;
+export default GigNav;
