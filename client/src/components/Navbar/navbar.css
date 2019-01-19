@@ -1,9 +1,13 @@
 .nav1 {
   position: absolute;
+  background-color: black;
+  background-image: linear-gradient(black, blue);
   left: 10%;
   top: 12%;
   width: 80%;
   height: 10%;
+  border-style: solid;
+  border-color: white;
 }
 
 .mr-auto {
@@ -22,7 +26,7 @@
 }
 .nav li {
   display: block;
-  color: white;
+
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -33,4 +37,6 @@ li {
 .nav-item {
   display: block;
   padding-right: 3%;
+  color: white;
+  font-weight: bold;
 }

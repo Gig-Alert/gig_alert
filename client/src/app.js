@@ -6,6 +6,7 @@ import Musicians from "./pages/musicians";
 import Title from "./components/Title";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
+import Concerts from "./pages/concerts";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/bands" component={Bands} />
         <Route path="/musicians" component={Musicians} />
         <Route path="/signup" component={Signup} />
+        <Route path="/concerts" component={Concerts} />
       </div>
     </Router>
   );

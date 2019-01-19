@@ -5,5 +5,14 @@
   margin-right: 15%;
   margin-left: 20%;
   margin-bottom: 10%;
+  padding: 2%;
   border-style: solid;
+  border-color: red;
+  background-position: center;
+  background-size: cover;
+}
+
+body {
+  background-color: black;
+  background-image: linear-gradient(black, blue);
 }

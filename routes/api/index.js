@@ -12,6 +12,15 @@ router.get("/bands", (req, res) => {
   });
 });
 
+router.get("/google", (req, res) => {
+  //passport
+  res.send("logging in");
+});
+
+router.get("/logout", (req, res) => {
+  //passport
+  res.send("logging out");
+});
 router.post("/bands", (req, res) => {
   Band.create(req.body).then(function(band) {
     res.send(band);

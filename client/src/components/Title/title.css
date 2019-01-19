@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
 .title {
   width: 100%;
   text-align: center;
   font-size: 4rem;
-  text-decoration: underline;
-  color: #2a77ae;
+  color: red;
+  text-shadow: 2px 2px white;
   margin-top: 0%;
-  margin-bottom: 20%;
+  margin-bottom: 15%;
+  font-family: "Pacifico", cursive;
 }

@@ -1,13 +1,11 @@
-.formMusicians {
+.formConcerts {
   width: 65%;
   height: 50%;
-  margin-top: -8%;
+  margin-top: 8%;
   margin-right: 15%;
   margin-left: 20%;
   margin-bottom: 10%;
   border-style: solid;
-  background-position: center;
-  background-size: cover;
 }
 .results {
   width: 65%;
@@ -17,4 +15,7 @@
   margin-left: 20%;
   margin-bottom: 10%;
   border-style: solid;
+}
+.concertHeader {
+  font-size: 24px;
 }

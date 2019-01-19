@@ -21,6 +21,9 @@ const GigNav = props => {
           <li className="nav-item">
             <Link to="/login">Login</Link>
           </li>
+          <li className="nav-item">
+            <Link to="/concerts">Concerts</Link>
+          </li>
         </ul>
       </Nav>
     </Navbar>

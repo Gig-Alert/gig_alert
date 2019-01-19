@@ -41,7 +41,7 @@ class Bands extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <Navbar />
         <Form className="formBand" style={backgroundHead}>
           <Form.Row>
