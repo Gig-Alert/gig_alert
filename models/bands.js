@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+const mongoose = require("mongoose")
+const Schema = mongoose.Schema
 
 const bandsSchema = new Schema({
   bands: { type: String, required: true },
@@ -7,8 +7,8 @@ const bandsSchema = new Schema({
   date: { type: Date, default: Date.now },
   type: { type: String, required: true },
   county: { type: String, required: true }
-});
+})
 
-const Bands = mongoose.model("Band", bandsSchema);
+const Bands = mongoose.model("Band", bandsSchema)
 
-module.exports = Bands;
+module.exports = Bands
