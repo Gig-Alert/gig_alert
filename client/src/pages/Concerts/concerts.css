@@ -6,6 +6,12 @@
     margin-left: 20%;
     margin-bottom: 10%;
     border-style: solid;
+    box-shadow: 10px 10px 5px rgb(103, 95, 95);
+  }
+  .form-label {
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    color: black
   }
   .results {
     width: 65%;
@@ -15,7 +21,23 @@
     margin-left: 20%;
     margin-bottom: 10%;
     border-style: solid;
+    box-shadow: 10px 10px 5px rgb(103, 95, 95);
   }
   .concertHeader {
+    font-size: 24px;
+  }
+  body {
+    background-image: radial-gradient(red,black,white,red);
+    background-repeat: no-repeat;
+    background-size: 100%
+  }
+  .card-header {
+    font-family: 'Pacifico', cursive;
+    font-size: 32px;
+    color: white;
+    background-image: linear-gradient(to right, red,red,black,gray,lightgray)
+  }
+  .card-title {
+    font-family: 'Pacifico', cursive;
     font-size: 24px
   }

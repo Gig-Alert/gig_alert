@@ -54,7 +54,7 @@ class Concerts extends Component {
 										</Form.Group>
 									</Form.Row>
 									<Button variant="primary" type="submit" onClick={this.handleSubmit}>
-									Submit
+									Search
 									</Button>
 						</Card.Body>
 				</Card>

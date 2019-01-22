@@ -5,6 +5,7 @@ import "./bands.css"
 import background from "../../Assets/img/bands.jpg"
 import axios from "axios"
 
+
 const backgroundHead = {
   backgroundImage: "url(" + background + ")"
 }
@@ -76,8 +77,10 @@ class Bands extends Component {
     return (
       <div>
         <Navbar />
+        
         <Form className="formBand" style={backgroundHead}>
           <Form.Row>
+
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Band Name</Form.Label>
               <Form.Control
@@ -88,6 +91,7 @@ class Bands extends Component {
                 onChange={this.handleChange}
               />
             </Form.Group>
+
           </Form.Row>
           <Form.Row>
             <Form.Group as={Col} controlId="formGridEmail">
@@ -148,10 +152,10 @@ class Bands extends Component {
               </Form.Control>
             </Form.Group>
           </Form.Row>
-
           <Button onClick={this.handleSubmit} variant="primary" type="button">
             Submit
-          </Button>
+          </Button> 
+          
         </Form>
       </div>
     )
