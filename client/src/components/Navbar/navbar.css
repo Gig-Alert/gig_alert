@@ -14,7 +14,9 @@
 
 .mr-auto {
   position: absolute;
-  left: 10%;
+  display: flex;
+  left: 35.5% !important;
+  right: 33% !important;
   top: 12%;
   width: 80%;
   height: 10%;
@@ -29,20 +31,21 @@
   margin: 0;
   padding: 0;
 }
-.nav li {
+/* .nav li {
   display: flex;
   justify-content: center;
   text-align: center;
 
   padding: 14px 16px;
   text-decoration: none;
-}
+} */
 /* li {
   float: left;
 } */
 a {
-  display: block;
+  display: flex;
   padding-right: 3%;
   color: white !important;
   font-weight: bold;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
 }

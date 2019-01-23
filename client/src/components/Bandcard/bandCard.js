@@ -1,8 +1,8 @@
 import React from "react";
 
 const Bandcard = props => (
-  <ul className="list-group results">
-    <h2>Results</h2>
+  <ul className="card card-header list-group results">
+    Results
 
     {props.bands.map(band => (
       <li key={band._id} className="list-group-item">

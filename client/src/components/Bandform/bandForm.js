@@ -9,9 +9,9 @@ import './bandForm.css'
 // Using the datalist element we can create autofill suggestions based on the props.breeds array
 const BandForm = props => (
   <Card className="formMusicians">
-    <Card.Header>Bands</Card.Header>
+    <Card.Header>Band Search by County</Card.Header>
     <Card.Body className="musicianBG">
-      <Card.Title>Band Search</Card.Title>
+      {/* <Card.Title>Band Search</Card.Title> */}
       <Card.Text />
       <Form.Row className="formBand">
         <Form.Group as={Col} controlId="formCounty">

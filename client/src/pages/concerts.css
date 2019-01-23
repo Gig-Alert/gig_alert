@@ -33,6 +33,7 @@ body {
 }
 .card-header {
   font-family: "Pacifico", cursive;
+  text-shadow: 4px 4px black;
   font-size: 32px;
   color: white;
   background-image: linear-gradient(to right, red, red, black, gray, lightgray);
