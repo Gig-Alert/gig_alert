@@ -3,7 +3,7 @@ const bandsController = require("../../controllers/bandsController");
 
 // Matches with "/api/bands"
 router
-  .route("/api/bands/")
+  .route("/")
   .get(bandsController.find)
   .post(bandsController.create);
 

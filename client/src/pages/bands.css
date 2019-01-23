@@ -1,18 +1,11 @@
 .formBand {
   width: 65%;
   height: 50%;
-  margin-top: -8%;
+  margin-top: 8%;
   margin-right: 15%;
   margin-left: 20%;
   margin-bottom: 10%;
-  padding: 2%;
   border-style: solid;
-  border-color: red;
-  background-position: center;
-  background-size: cover;
-}
-
-body {
-  background-color: black;
-  background-image: linear-gradient(black, blue);
+  padding: 3%;
+  box-shadow: 10px 10px 5px rgb(103, 95, 95);
 }

@@ -3,7 +3,9 @@ import axios from "axios";
 export default {
   // Gets all bands
   getBands: function(value) {
-    return axios.get("/api/bands/");
+    //console.log("County in API UTIL: ", value);
+    return axios.get("/api/bands/", { params: { county: value } });
+    //return axios.get("/api/bands/");
   },
   findConcert: function(city) {
     return axios.get(

@@ -1,0 +1,17 @@
+.buffer {
+  margin: 10%;
+  box-shadow: 10px 10px 5px rgb(103, 95, 95);
+}
+.homebody {
+  background-image: url("../Assets/img/card_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.special-link {
+  color: white;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-size: 20px;
+}
+.special-link:hover {
+  color: red !important;
+}

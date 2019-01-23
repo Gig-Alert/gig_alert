@@ -10,7 +10,7 @@ import BandForm from "../components/Bandform/bandForm";
 
 class Musicians extends Component {
   state = {
-    county: "",
+    county: null,
     bands: []
   };
 
@@ -18,16 +18,15 @@ class Musicians extends Component {
   //   this.loadBands();
   // }
 
-  loadBands = () => {
-    API.getBands()
-      .then(res => {
-        this.setState({
-          bands: res.data.data,
-          county: ""
-        });
-        console.log(this.state.county);
-      })
-      .catch(err => console.log(err));
+  loadBands = returnedBandsArray => {
+    //  API.getBands()
+    //    .then(res => {
+    this.setState({
+      bands: returnedBandsArray,
+      county: ""
+    });
+    //     })
+    //    .catch(err => console.log(err));
   };
 
   handleChange = e => {
@@ -38,15 +37,18 @@ class Musicians extends Component {
     // this.setState({
     //   [county]: value
     // });
-    console.log(e.target.value);
+    //console.log(this.state.county);
   };
   handleSubmit = e => {
     e.preventDefault();
     if (this.state.county) {
       API.getBands(this.state.county)
         .then(res => {
-          this.loadBands(this.state.county);
-          console.log(this.state.bands);
+          //console.log(res.data.data);
+          //console.log(JSON.parse(res.toArray()));
+          this.loadBands(res.data.data);
+          //console.log(this.loadBands(res));
+          //this.setState({ bands: [res.data.data], county: "" });
         })
         .catch(err => console.log(err));
     }
