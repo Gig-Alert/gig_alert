@@ -24,6 +24,11 @@ const BandForm = props => (
           >
             <option>Choose...</option>
             <option>Cuyahoga</option>
+            <option>Franklin</option>
+            <option>Geauga</option>
+            <option>Hamilton</option>
+            <option>Lake</option>
+            <option>Medina</option>
             <option>Summit</option>
           </Form.Control>
         </Form.Group>

@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import { Jumbotron, Container, Nav, Card, Row } from "react-bootstrap";
+import { Container, Nav, Card, Row } from "react-bootstrap";
 import bandImage from "../Assets/img/studio-band.jpg";
 import soloImage from "../Assets/img/solo.jpeg";
 import "./homes.css";
