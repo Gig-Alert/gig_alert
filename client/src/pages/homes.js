@@ -12,7 +12,7 @@ const Home = () => {
       {/* <Jumbotron fluid> */}
       <Container>
         <Row>
-          <Card className="buffer">
+          <Card className="buffer-left">
             <Card.Header>Bands</Card.Header>
             <Card.Body className="homebody">
               <img alt="band" src={bandImage} />
@@ -23,7 +23,7 @@ const Home = () => {
               </Nav.Item>
             </Card.Body>
           </Card>
-          <Card className="buffer">
+          <Card className="buffer-right">
             <Card.Header>Solo Artists</Card.Header>
             <Card.Body className="homebody">
               <img alt="solo" src={soloImage} />

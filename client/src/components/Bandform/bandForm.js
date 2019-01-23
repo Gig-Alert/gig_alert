@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Button, Form, Col } from "react-bootstrap";
+import './bandForm.css'
 //import background from "../Assets/img/instruments.jpg";
 
 // const backgroundHead = {
@@ -9,7 +10,7 @@ import { Card, Button, Form, Col } from "react-bootstrap";
 const BandForm = props => (
   <Card className="formMusicians">
     <Card.Header>Bands</Card.Header>
-    <Card.Body>
+    <Card.Body className="musicianBG">
       <Card.Title>Band Search</Card.Title>
       <Card.Text />
       <Form.Row className="formBand">

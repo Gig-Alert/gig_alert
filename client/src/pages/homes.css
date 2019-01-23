@@ -1,5 +1,11 @@
-.buffer {
-  margin: 10%;
+.buffer-left {
+  margin-top: 8%;
+  margin-left: 15.5%;
+  box-shadow: 10px 10px 5px rgb(103, 95, 95);
+}
+.buffer-right {
+  margin-top: 8%;
+  margin-left: 15%;
   box-shadow: 10px 10px 5px rgb(103, 95, 95);
 }
 .homebody {

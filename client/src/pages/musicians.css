@@ -8,6 +8,7 @@
   border-style: solid;
   background-position: center;
   background-size: cover;
+  box-shadow: 10px 10px 5px rgb(103, 95, 95);
 }
 .results {
   width: 65%;
@@ -17,4 +18,5 @@
   margin-left: 20%;
   margin-bottom: 10%;
   border-style: solid;
+  box-shadow: 10px 10px 5px rgb(103, 95, 95);
 }

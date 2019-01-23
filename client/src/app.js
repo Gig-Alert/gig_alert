@@ -14,7 +14,7 @@ const App = () => {
       <div>
         <Title name="Gig Alert" />
         <Route exact path="/login" component={Login} />
-        <Route path="/homes" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route path="/bands" component={Bands} />
         <Route path="/musicians" component={Musicians} />
         <Route path="/signup" component={Signup} />

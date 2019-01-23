@@ -27,7 +27,7 @@
   font-size: 24px;
 }
 body {
-  background-image: radial-gradient(red, black, white, red);
+  background-image: radial-gradient(red, black, whitesmoke, red);
   background-repeat: no-repeat;
   background-size: 100%;
 }
