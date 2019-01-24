@@ -1,10 +1,12 @@
 .buffer-left {
-  margin-top: 15%;
+  margin-top: 5%;
+  margin-bottom: 10%;
   margin-left: 15.5%;
   box-shadow: 10px 10px 5px rgb(103, 95, 95);
 }
 .buffer-right {
-  margin-top: 15%;
+  margin-top: 5%;
+  margin-bottom: 10%;
   margin-left: 15%;
   box-shadow: 10px 10px 5px rgb(103, 95, 95);
 }
@@ -20,4 +22,20 @@
 }
 .special-link:hover {
   color: red !important;
+}
+.about {
+  margin-top: 15%;
+  width: auto;
+  box-shadow: 10px 10px 5px rgb(103, 95, 95);
+  font-family: "Pacifico", cursive;
+}
+.aboutP {
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-size: 20px;
+}
+.aboutHead {
+  font-family: "Pacifico", cursive;
+  text-shadow: 5px 5px black;
+  font-size: 4rem;
+  color: red
 }

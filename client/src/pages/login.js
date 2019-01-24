@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "../components/Navbar";
-import { FormGroup, FormControl, FormLabel, Button, Nav } from "react-bootstrap";
+import { FormGroup, FormControl, FormLabel, Button, Card } from "react-bootstrap";
 import "./login.css";
 
 class Login extends Component {
@@ -43,6 +43,11 @@ class Login extends Component {
     return (
       <div className="Login">
         <Navbar />
+        <Card>
+          <Card.Header>
+            Hello
+          </Card.Header>
+          <Card.Body>
         <form onSubmit={this.handleSubmit}>
           <FormGroup controlId="username" bssize="large">
             <FormLabel>Username</FormLabel>
@@ -79,6 +84,8 @@ class Login extends Component {
             Google+
           </Button>
         </form>
+        </Card.Body>
+        </Card>
       </div>
     );
   }
