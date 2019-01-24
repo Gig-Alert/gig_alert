@@ -7,6 +7,9 @@ const mongoose = require("mongoose");
 const bandsRoutes = require("./routes/api/bands.js");
 // const apiRoutes = require("./routes");
 const passportSetup = require("./config/passport-setup");
+const passport = require("passport");
+var cors = require("cors");
+//const authRoutes = require("./routes/api/index");
 
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -15,7 +18,29 @@ app.use(bodyParser.json());
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static("client/build"));
 // }
+app.use(cors());
 
+app.get("/api/google", function(req, res, next) {
+  res.json({ msg: "This is CORS-enabled for all origins!" });
+});
+
+app.listen(80, function() {
+  console.log("CORS-enabled web server listening on port 80");
+});
+
+app.get("/api/google", passport.authenticate("google", { scope: ["profile"] }));
+
+app.get(
+  "/api/google/callback",
+  passport.authenticate("google", { failureRedirect: "/login" }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect("/");
+  }
+);
+
+app.use(passport.initialize());
+require("./config/passport-setup");
 // Add routes, both API and view
 // Add a route that points to our index.html for react-router to handle it
 
@@ -25,6 +50,7 @@ app.use(bodyParser.json());
 app.use("/api", require("./routes/api"));
 //app.use("/api", apiRoutes);
 app.use(bandsRoutes);
+//app.use("/auth", require("./routes/api"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bandslist");
 

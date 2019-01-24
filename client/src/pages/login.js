@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import Navbar from "../components/Navbar";
 import { FormGroup, FormControl, FormLabel, Button, Card } from "react-bootstrap";
 import "./login.css";
+import LogNav from "../components/Lognav";
+import queryString from "query-string";
+
+// import LoaderButton from "../components/LoaderButton";
+
 
 class Login extends Component {
   constructor(props) {
@@ -24,7 +29,7 @@ class Login extends Component {
     });
   };
 
-  handleSubmit = async event => {
+  handleSubmit = event => {
     event.preventDefault();
 
     // this.setState({ isLoading: true });
@@ -38,6 +43,14 @@ class Login extends Component {
     //   this.setState({ isLoading: false });
     // }
   };
+
+  componentWillMount() {
+    var query = queryString.parse(this.props.location.search);
+    if (query.token) {
+      window.localStorage.setItem("jwt", query.token);
+      this.props.history.push("/");
+    }
+  }
 
   render() {
     return (
@@ -80,7 +93,10 @@ class Login extends Component {
               Submit
             </Button>
           }
-          <Button className="google-btn" href="/auth/google">
+          <Button
+            href="http://localhost:3000/api/google"
+            className="google-btn"
+          >
             Google+
           </Button>
         </form>

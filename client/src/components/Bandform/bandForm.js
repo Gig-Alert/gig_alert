@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Button, Form, Col } from "react-bootstrap";
-import './bandForm.css'
+import "./bandForm.css";
 //import background from "../Assets/img/instruments.jpg";
 
 // const backgroundHead = {
@@ -25,6 +25,11 @@ const BandForm = props => (
           >
             <option>Choose...</option>
             <option>Cuyahoga</option>
+            <option>Franklin</option>
+            <option>Geauga</option>
+            <option>Hamilton</option>
+            <option>Lake</option>
+            <option>Medina</option>
             <option>Summit</option>
           </Form.Control>
         </Form.Group>

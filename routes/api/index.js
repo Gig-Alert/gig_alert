@@ -18,8 +18,6 @@ router.get("/bands", (req, res) => {
   });
 });
 
-// router.get("/bands/:county", (req, res) => {
-
 //auth login
 router.get("/login", (req, res) => {
   res.render("login");
@@ -28,14 +26,22 @@ router.get("/login", (req, res) => {
 router.get(
   "/google",
   passport.authenticate("google", {
-    scope: ["profile"]
+    scope: ["profile", "email"]
   })
 );
 
 router.get("/logout", (req, res) => {
   //passport
   res.send("logging out");
-});
+}),
+  router.get(
+    "/google/redirect",
+    passport.authenticate("google", { failureRedirect: "/", session: false }),
+    function(req, res) {
+      var token = req.user.token;
+      res.redirect("https://localhost:3000?token=" + token);
+    }
+  );
 router.post("/bands", (req, res) => {
   Band.create(req.body).then(function(band) {
     res.send(band);

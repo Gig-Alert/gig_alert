@@ -20,11 +20,18 @@ class Bands extends Component {
     });
   };
   handleSubmit = e => {
+    alert("Your band was submitted: " + this.state.value);
     e.preventDefault();
 
     const { bands, email, date, type, county } = this.state;
     if (!bands || !email || !date || !type || !county) return;
-
+    this.setState({
+      bands: "",
+      email: "",
+      date: "",
+      type: "",
+      county: ""
+    });
     axios
       .post("/api/bands", this.state)
       .then(function(response) {
@@ -116,6 +123,11 @@ class Bands extends Component {
               >
                 <option>Choose...</option>
                 <option>Cuyahoga</option>
+                <option>Franklin</option>
+                <option>Geauga</option>
+                <option>Hamilton</option>
+                <option>Lake</option>
+                <option>Medina</option>
                 <option>Summit</option>
               </Form.Control>
             </Form.Group>

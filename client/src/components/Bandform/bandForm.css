@@ -1,4 +1,13 @@
 .musicianBG {
+  background-image: url("/../Assets/img/instruments.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.formBand {
+  border: none;
+  box-shadow: 10px 10px 5px rgb(103, 95, 95);
+}
+
     background-image: url('../../Assets/img/image3.png');
     background-size: cover;
     background-repeat: no-repeat
