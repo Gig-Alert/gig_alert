@@ -7,6 +7,10 @@ bin-release/
 # Other files and folders
 .settings/
 
+node_modules/
+
+config/
+
 # Executables
 *.swf
 *.air

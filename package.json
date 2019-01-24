@@ -1,0 +1,43 @@
+{
+  "name": "gig_alert",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd client && npm run start",
+    "server": "node-dev server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "run-p server start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gig-Alert/gig_alert.git"
+  },
+  "author": "Larry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gig-Alert/gig_alert/issues"
+  },
+  "homepage": "https://github.com/Gig-Alert/gig_alert#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.3",
+    "npm-run-all": "^4.1.5",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
+    "path": "^0.12.7",
+    "react-bootstrap": "^1.0.0-beta.3"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "node-dev": "^3.1.3"
+  }
+}
