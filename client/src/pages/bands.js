@@ -33,6 +33,13 @@ class Bands extends Component {
       .catch(error => {
         console.log(error.response);
       });
+
+    this.setState({
+      bands: "",
+      email: "",
+      date: "",
+      type: "",
+      county: ""})
   };
 
   render() {
@@ -48,7 +55,7 @@ class Bands extends Component {
               <Form.Control
                 type="text"
                 name="bands"
-                defaultValue={this.state.bands}
+                value={this.state.bands}
                 placeholder="Band Name"
                 onChange={this.handleChange}
               />
@@ -60,7 +67,7 @@ class Bands extends Component {
               <Form.Control
                 type="email"
                 name="email"
-                defaultValue={this.state.email}
+                value={this.state.email}
                 placeholder="Email"
                 onChange={this.handleChange}
               />
@@ -73,7 +80,7 @@ class Bands extends Component {
               <Form.Control
                 type="date"
                 name="date"
-                defaultValue={this.state.date}
+                value={this.state.date}
                 placeholder="Date Needed"
                 onChange={this.handleChange}
               />
@@ -85,7 +92,7 @@ class Bands extends Component {
               <Form.Control
                 as="select"
                 name="type"
-                defaultValue={this.state.type}
+                value={this.state.type}
                 placeholder="type"
                 onChange={this.handleChange}
               >
@@ -103,7 +110,7 @@ class Bands extends Component {
               <Form.Control
                 as="select"
                 name="county"
-                defaultValue={this.state.county}
+                value={this.state.county}
                 placeholder="County"
                 onChange={this.handleChange}
               >
