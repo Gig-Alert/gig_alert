@@ -1,11 +1,17 @@
-const db = require("../models/bands");
+const db = require("../models");
 
 // Defining methods for the bandsController
 module.exports = {
-  findAll: function(req, res) {
-    db.Bands.find(req.query)
-      .sort({ date: -1 })
-      .then(dbModel => res.json(dbModel))
+  find: function(req, res) {
+    console.log(
+      "---------- In controller .FIND -------------------",
+      req.params
+    );
+
+    db.Bands.find({ county: req.query.county })
+      .then(dbModel => {
+        res.json(dbModel);
+      })
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {

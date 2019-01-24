@@ -5,6 +5,8 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const mongoose = require("mongoose");
 const bandsRoutes = require("./routes/api/bands.js");
+// const apiRoutes = require("./routes");
+const passportSetup = require("./config/passport-setup");
 
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -21,6 +23,7 @@ app.use(bodyParser.json());
 //  res.sendFile(path.join(__dirname, 'build', 'index.html'))
 // })
 app.use("/api", require("./routes/api"));
+//app.use("/api", apiRoutes);
 app.use(bandsRoutes);
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bandslist");

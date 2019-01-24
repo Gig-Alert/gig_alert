@@ -1,54 +1,69 @@
 import React, { Component } from "react";
 import Navbar from "../components/Navbar";
-import { Card, Button, Form, Col } from "react-bootstrap";
+// import { Card, Button, Form, Col } from "react-bootstrap";
 import API from "../utils/API";
 import "./musicians.css";
-import axios from "axios";
+// import axios from "axios";
+// import background from "../Assets/img/instruments.jpg";
+import Bandcard from "../components/Bandcard/bandCard";
+import BandForm from "../components/Bandform/bandForm";
 
 class Musicians extends Component {
   state = {
-    county: ""
+    county: null,
+    bands: []
   };
-  componentDidMount() {
-    this.loadBands();
-  }
 
-  loadBands = () => {
-    API.getBands()
-      .then(res => this.setState({ county: "" }))
-      .catch(err => console.log(err));
+  // componentDidMount() {
+  //   this.loadBands();
+  // }
+
+  loadBands = returnedBandsArray => {
+    //  API.getBands()
+    //    .then(res => {
+    this.setState({
+      bands: returnedBandsArray,
+      county: ""
+    });
+    //     })
+    //    .catch(err => console.log(err));
   };
 
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
     });
+    // const { county, value } = e.target;
+    // this.setState({
+    //   [county]: value
+    // });
+    //console.log(this.state.county);
   };
   handleSubmit = e => {
     e.preventDefault();
-
-    const { county } = this.state;
-    if (!county) return;
-
-    axios
-      .get("/api/bands", this.state)
-      .then(function(response) {
-        console.log(response);
-      })
-      .catch(error => {
-        console.log(error.response);
-      });
+    if (this.state.county) {
+      API.getBands(this.state.county)
+        .then(res => {
+          //console.log(res.data.data);
+          //console.log(JSON.parse(res.toArray()));
+          this.loadBands(res.data.data);
+          //console.log(this.loadBands(res));
+          //this.setState({ bands: [res.data.data], county: "" });
+        })
+        .catch(err => console.log(err));
+    }
   };
+
   render() {
     return (
       <div>
         <Navbar />
-        <Card className="formMusicians">
+        {/* <Card className="formMusicians" style={backgroundHead}>
           <Card.Header>Bands</Card.Header>
           <Card.Body>
             <Card.Title>Band Search</Card.Title>
             <Card.Text />
-            <Form.Row>
+            <Form.Row className="formBand">
               <Form.Group as={Col} controlId="formCounty">
                 <Form.Label>County</Form.Label>
                 <Form.Control
@@ -68,10 +83,12 @@ class Musicians extends Component {
               Submit
             </Button>
           </Card.Body>
-        </Card>
-        <Card className="results">
-          <Card.Body>Results</Card.Body>
-        </Card>
+        </Card> */}
+        <BandForm
+          handleSubmit={this.handleSubmit}
+          handleChange={this.handleChange}
+        />
+        <Bandcard bands={this.state.bands} />
       </div>
     );
   }

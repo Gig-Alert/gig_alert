@@ -2,12 +2,8 @@ import React, { Component } from "react";
 import Navbar from "../components/Navbar";
 import { Form, Col, Button } from "react-bootstrap";
 import "./bands.css";
-import background from "../Assets/img/bands.jpg";
 import axios from "axios";
 
-const backgroundHead = {
-  backgroundImage: "url(" + background + ")"
-};
 
 class Bands extends Component {
   state = {
@@ -37,20 +33,29 @@ class Bands extends Component {
       .catch(error => {
         console.log(error.response);
       });
+
+    this.setState({
+      bands: "",
+      email: "",
+      date: "",
+      type: "",
+      county: ""})
   };
 
   render() {
     return (
       <div>
-        <Navbar />
-        <Form className="formBand" style={backgroundHead}>
+    <Navbar />
+      {/* // <div className="container"> */}
+        
+        <Form className="formBand">
           <Form.Row>
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Band Name</Form.Label>
               <Form.Control
                 type="text"
                 name="bands"
-                defaultValue={this.state.bands}
+                value={this.state.bands}
                 placeholder="Band Name"
                 onChange={this.handleChange}
               />
@@ -62,7 +67,7 @@ class Bands extends Component {
               <Form.Control
                 type="email"
                 name="email"
-                defaultValue={this.state.email}
+                value={this.state.email}
                 placeholder="Email"
                 onChange={this.handleChange}
               />
@@ -75,7 +80,7 @@ class Bands extends Component {
               <Form.Control
                 type="date"
                 name="date"
-                defaultValue={this.state.date}
+                value={this.state.date}
                 placeholder="Date Needed"
                 onChange={this.handleChange}
               />
@@ -87,7 +92,7 @@ class Bands extends Component {
               <Form.Control
                 as="select"
                 name="type"
-                defaultValue={this.state.type}
+                value={this.state.type}
                 placeholder="type"
                 onChange={this.handleChange}
               >
@@ -105,7 +110,7 @@ class Bands extends Component {
               <Form.Control
                 as="select"
                 name="county"
-                defaultValue={this.state.county}
+                value={this.state.county}
                 placeholder="County"
                 onChange={this.handleChange}
               >

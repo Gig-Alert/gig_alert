@@ -1,36 +1,51 @@
 .nav1 {
   position: absolute;
-  left: 10%;
-  top: 12%;
-  width: 80%;
-  height: 10%;
+  background-image: linear-gradient(to right, red, red, black, gray, lightgray);
+  /* left: 10%; */
+  top: 19%;
+  width: 100%;
+  height: 12%;
+  display: flex;
+  /* padding-left: 33%; */
+  border-style: solid;
+  border-top: 5px;
+  border-color: black;
 }
 
 .mr-auto {
   position: absolute;
-  left: 10%;
+  display: flex;
+  left: 35.5% !important;
+  right: 33% !important;
   top: 12%;
   width: 80%;
   height: 10%;
-  margin: 0;
+  margin-bottom: 20%;
 }
-.ul {
+.nav ul {
+  width: 65%;
+  margin: auto;
+  text-align: center;
   list-style-type: none;
   overflow: hidden;
   margin: 0;
   padding: 0;
 }
-.nav li {
-  display: block;
-  color: white;
+/* .nav li {
+  display: flex;
+  justify-content: center;
   text-align: center;
+
   padding: 14px 16px;
   text-decoration: none;
-}
-li {
+} */
+/* li {
   float: left;
-}
-.nav-item {
-  display: block;
+} */
+a {
+  display: flex;
   padding-right: 3%;
+  color: white !important;
+  font-weight: bold;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
 }

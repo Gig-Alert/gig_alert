@@ -9,6 +9,6 @@ const bandsSchema = new Schema({
   county: { type: String, required: true }
 });
 
-const Bands = mongoose.model("Band", bandsSchema);
+const Bands = mongoose.model("Bands", bandsSchema);
 
 module.exports = Bands;

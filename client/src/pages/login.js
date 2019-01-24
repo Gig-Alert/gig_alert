@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { FormGroup, FormControl, FormLabel } from "react-bootstrap";
+import Navbar from "../components/Navbar";
+import { FormGroup, FormControl, FormLabel, Button, Card } from "react-bootstrap";
 import "./login.css";
-import LogNav from "../components/Lognav";
-// import LoaderButton from "../components/LoaderButton";
 
 class Login extends Component {
   constructor(props) {
@@ -43,7 +42,12 @@ class Login extends Component {
   render() {
     return (
       <div className="Login">
-        <LogNav />
+        <Navbar />
+        <Card>
+          <Card.Header>
+            Hello
+          </Card.Header>
+          <Card.Body>
         <form onSubmit={this.handleSubmit}>
           <FormGroup controlId="username" bssize="large">
             <FormLabel>Username</FormLabel>
@@ -62,7 +66,8 @@ class Login extends Component {
               type="password"
             />
           </FormGroup>
-          {/* <LoaderButton
+          {
+            /* <LoaderButton
             block
             bssize="large"
             disabled={!this.validateForm()}
@@ -70,8 +75,17 @@ class Login extends Component {
             isLoading={this.state.isLoading}
             text="Login"
             loadingText="Logging in…"
-          /> */}
+          /> */
+            <Button variant="primary" type="button">
+              Submit
+            </Button>
+          }
+          <Button className="google-btn" href="/auth/google">
+            Google+
+          </Button>
         </form>
+        </Card.Body>
+        </Card>
       </div>
     );
   }

@@ -1,9 +1,14 @@
 .formBand {
   width: 65%;
   height: 50%;
-  margin-top: -8%;
+  margin-top: 15%;
   margin-right: 15%;
   margin-left: 20%;
   margin-bottom: 10%;
   border-style: solid;
+  padding: 3%;
+  box-shadow: 10px 10px 5px rgb(103, 95, 95);
+  background-image: url('../Assets/img/image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }

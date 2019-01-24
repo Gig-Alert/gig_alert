@@ -10,7 +10,7 @@ const GigNav = props => {
         {/* <h1 className="brand-logo" /> */}
         <ul className="nav nav-tabs">
           <li className="nav-item">
-            <Link to="/homes">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li className="nav-item">
             <Link to="/bands">Bands</Link>
@@ -20,6 +20,9 @@ const GigNav = props => {
           </li>
           <li className="nav-item">
             <Link to="/login">Login</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/concerts">Concerts</Link>
           </li>
         </ul>
       </Nav>
