@@ -4,7 +4,7 @@ import Home from "./pages/homes";
 import Bands from "./pages/bands";
 import Musicians from "./pages/musicians";
 import Title from "./components/Title";
-import Login from "./pages/login";
+// import Login from "./pages/login";
 import Signup from "./pages/signup";
 import Concerts from "./pages/concerts";
 
@@ -13,7 +13,7 @@ const App = () => {
     <Router>
       <div>
         <Title name="Gig Alert" />
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/" component={Home} />
         <Route path="/homes" component={Home} />
         <Route path="/bands" component={Bands} />
         <Route path="/musicians" component={Musicians} />

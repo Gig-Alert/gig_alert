@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Button, Form, Col } from "react-bootstrap";
+import "./bandForm.css";
 //import background from "../Assets/img/instruments.jpg";
 
 // const backgroundHead = {
