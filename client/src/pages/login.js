@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { FormGroup, FormControl, FormLabel, Button } from "react-bootstrap";
+import Navbar from "../components/Navbar";
+import { FormGroup, FormControl, FormLabel, Button, Nav } from "react-bootstrap";
 import "./login.css";
-import LogNav from "../components/Lognav";
-// import LoaderButton from "../components/LoaderButton";
 
 class Login extends Component {
   constructor(props) {
@@ -43,7 +42,7 @@ class Login extends Component {
   render() {
     return (
       <div className="Login">
-        <LogNav />
+        <Navbar />
         <form onSubmit={this.handleSubmit}>
           <FormGroup controlId="username" bssize="large">
             <FormLabel>Username</FormLabel>

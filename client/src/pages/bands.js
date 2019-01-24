@@ -2,12 +2,8 @@ import React, { Component } from "react";
 import Navbar from "../components/Navbar";
 import { Form, Col, Button } from "react-bootstrap";
 import "./bands.css";
-import background from "../Assets/img/bands.jpg";
 import axios from "axios";
 
-const backgroundHead = {
-  backgroundImage: "url(" + background + ")"
-};
 
 class Bands extends Component {
   state = {
@@ -41,9 +37,11 @@ class Bands extends Component {
 
   render() {
     return (
-      <div className="container">
-        <Navbar />
-        <Form className="formBand" style={backgroundHead}>
+      <div>
+    <Navbar />
+      {/* // <div className="container"> */}
+        
+        <Form className="formBand">
           <Form.Row>
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Band Name</Form.Label>

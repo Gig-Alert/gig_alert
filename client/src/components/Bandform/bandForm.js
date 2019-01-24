@@ -13,7 +13,7 @@ const BandForm = props => (
     <Card.Body className="musicianBG">
       {/* <Card.Title>Band Search</Card.Title> */}
       <Card.Text />
-      <Form.Row className="formBand">
+      <Form.Row>
         <Form.Group as={Col} controlId="formCounty">
           <Form.Label>County</Form.Label>
           <Form.Control
