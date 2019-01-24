@@ -1,7 +1,7 @@
 .formConcerts {
   width: 65%;
   height: 50%;
-  margin-top: 8%;
+  margin-top: 15%;
   margin-right: 15%;
   margin-left: 20%;
   margin-bottom: 10%;
@@ -27,12 +27,13 @@
   font-size: 24px;
 }
 body {
-  background-image: radial-gradient(red, black, white, red);
+  background-image: radial-gradient(red, black, whitesmoke, red);
   background-repeat: no-repeat;
   background-size: 100%;
 }
 .card-header {
   font-family: "Pacifico", cursive;
+  text-shadow: 4px 4px black;
   font-size: 32px;
   color: white;
   background-image: linear-gradient(to right, red, red, black, gray, lightgray);

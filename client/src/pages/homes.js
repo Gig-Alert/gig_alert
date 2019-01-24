@@ -9,10 +9,27 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      {/* <Jumbotron fluid> */}
       <Container>
         <Row>
-          <Card className="buffer">
+          <Card className="about">
+            <Card.Header>
+              About Our App
+            </Card.Header>
+            <Card.Body>
+             <h1 className="aboutHead">Gig Alert</h1> 
+             <br></br>
+             <p className="aboutP">Gig Alert is a way for local artists and musicians to connect with one another!</p>
+             <p className="aboutP">Are you in a band, but one of your members can't make a show you've booked? Or are you new in town and just looking for new people to jam with? You can fill out our band form, which will then get posted to our database for local musicians to see.</p>
+             <p className="aboutP">If they fit your criteria, they can send you an email and you can get together to make music!</p>
+             <p className="aboutP">In addition to finding new people to play with and finding a last minute replacement musician for your band, you can also search for upcoming concerts! Currently, we 
+               support Cleveland, Columbus, Cincinnati, Chicago, Detroit, and Pittsburgh events.  
+             </p>
+
+            </Card.Body>
+          </Card>
+        </Row>
+        <Row>
+          <Card className="buffer-left">
             <Card.Header>Bands</Card.Header>
             <Card.Body className="homebody">
               <img alt="band" src={bandImage} />
@@ -23,7 +40,7 @@ const Home = () => {
               </Nav.Item>
             </Card.Body>
           </Card>
-          <Card className="buffer">
+          <Card className="buffer-right">
             <Card.Header>Solo Artists</Card.Header>
             <Card.Body className="homebody">
               <img alt="solo" src={soloImage} />
@@ -35,18 +52,7 @@ const Home = () => {
             </Card.Body>
           </Card>
         </Row>
-        <h1>Maybe here we can describe the app... how it should work anyway</h1>
-        {/* <h1>Are you a</h1>
-          <Nav variant="tabs" defaultActiveKey="/bands">
-            <Nav.Item>
-              <Nav.Link href="/bands">Band</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/musicians">Musician</Nav.Link>
-            </Nav.Item>
-          </Nav> */}
       </Container>
-      {/* </Jumbotron> */}
     </div>
   );
 };
