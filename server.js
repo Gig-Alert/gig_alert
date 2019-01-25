@@ -11,6 +11,10 @@ const bandsRoutes = require("./routes/api/bands.js");
 //var cors = require("cors");
 //const authRoutes = require("./routes/api/index");
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
