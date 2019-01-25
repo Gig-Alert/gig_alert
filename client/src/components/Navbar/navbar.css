@@ -1,4 +1,4 @@
-/* .nav1 {
+.nav1 {
   position: absolute;
   background-image: linear-gradient(to right, red, red, black, gray, lightgray);
   /* left: 10%; */
@@ -47,10 +47,8 @@ a {
   padding-right: 3%;
   color: white !important;
   font-weight: bold;
-
-} */
-
-.nav1 {
+}
+*/ .nav1 {
   position: absolute;
   background-image: linear-gradient(to right, red, red, black, gray, lightgray);
   /* left: 10%; */
